@@ -1,28 +1,12 @@
-# aulas
-# Estrutura de Pastas - Coordenação Pedagógica
+# Script de Criação de Estrutura de Pastas - Coordenação Pedagógica
 
-Este repositório contém um script em Python que cria automaticamente a estrutura de pastas da Coordenação Pedagógica conforme a organização escolar.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/escolacaetanodecampos-prog/aulas/blob/main/criar_pastas_colab.ipynb)
 
-## 📂 Estrutura Criada
+Este notebook cria automaticamente a estrutura de pastas da Coordenação Pedagógica no seu Google Drive usando Python e Google Colab.
 
-A árvore de diretórios inclui:
+## ✅ Como usar
 
-- Ensino Fundamental
-  - Anos Iniciais (1ª à 5ª Série)
-  - Anos Finais (6º ao 9º Ano)
-- Ensino Médio (1º ao 2º Ano - Humanas e Exatas)
-- Ensino Médio Técnico (com disciplinas comuns e específicas por curso técnico)
-
-## 💻 Requisitos
-
-- Python 3 instalado no computador
-- Acesso ao terminal (Git Bash, CMD, PowerShell, Terminal no Linux/macOS)
-
-## ▶️ Como usar
-
-1. **Clone ou baixe o repositório:**
-
-   Usando Git (opcional):
-   ```bash
-   git clone https://github.com/escolacaetanodecampos-prog/estrutura-pastas-coordenacao-pedagogica.git
-   cd estrutura-pastas-coordenacao-pedagogica
+1. Clique no botão **"Open In Colab"** acima
+2. Autorize o acesso ao seu Google Drive quando solicitado
+3. Execute todas as células para gerar a estrutura completa de pastas
+4. As pastas serão criadas em: `Meu Drive > Coordenação Pedagógica`
