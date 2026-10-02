@@ -1,0 +1,746 @@
+{
+  "vaga": {
+    "titulo": "Assistente Administrativo",
+    "empresa": "Nova Gestão Serviços Administrativos Ltda. (fictícia)",
+    "objetivo": "Apoiar rotinas administrativas, organização de documentos, atendimento, planilhas e controles internos.",
+    "requisitos": [
+      "Ensino médio completo",
+      "Conhecimentos básicos de informática",
+      "Organização de documentos",
+      "Boa comunicação",
+      "Capacidade de trabalhar em equipe"
+    ],
+    "desejaveis": [
+      "Excel intermediário",
+      "Experiência administrativa",
+      "Conhecimento de sistemas ERP",
+      "Organização de indicadores"
+    ]
+  },
+  "pesos": {
+    "hard": 30,
+    "soft": 30,
+    "experiencia": 20,
+    "formacao": 10,
+    "entrevista": 10
+  },
+  "candidatos": [
+    {
+      "id": "CAND-001",
+      "nome": "ANA LUIZA OLIVEIRA DA SILVA",
+      "idade": 19,
+      "formacao": "Ensino Médio + Técnico em Administração",
+      "experiencia": "Auxiliar de loja — 8 meses",
+      "hard": [
+        "Excel intermediário",
+        "Word",
+        "atendimento",
+        "organização digital"
+      ],
+      "soft": [
+        "comunicação",
+        "empatia",
+        "organização",
+        "trabalho em equipe"
+      ],
+      "teste": 82,
+      "entrevista": 88,
+      "pretensao": 1850,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Aperfeiçoar Excel e rotinas financeiras"
+    },
+    {
+      "id": "CAND-002",
+      "nome": "ANA VITORIA ALVES MALAMAN",
+      "idade": 20,
+      "formacao": "Técnico em Administração concluído",
+      "experiencia": "Assistente de recepção — 1 ano",
+      "hard": [
+        "Excel básico",
+        "Google Workspace",
+        "atendimento",
+        "agenda"
+      ],
+      "soft": [
+        "comunicação",
+        "responsabilidade",
+        "cordialidade",
+        "flexibilidade"
+      ],
+      "teste": 76,
+      "entrevista": 92,
+      "pretensao": 2100,
+      "disponibilidade": "15 dias",
+      "desenvolvimento": "Excel e controles administrativos"
+    },
+    {
+      "id": "CAND-003",
+      "nome": "ANTONNY GABRIEL DIAS SILVA",
+      "idade": 19,
+      "formacao": "Ensino Médio + curso de Excel",
+      "experiencia": "Estágio administrativo — 6 meses",
+      "hard": [
+        "Excel avançado",
+        "planilhas",
+        "cadastro",
+        "organização de dados"
+      ],
+      "soft": [
+        "raciocínio lógico",
+        "concentração",
+        "autonomia",
+        "comunicação"
+      ],
+      "teste": 94,
+      "entrevista": 74,
+      "pretensao": 1900,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Comunicação em situações de atendimento"
+    },
+    {
+      "id": "CAND-004",
+      "nome": "BRENO PEREIRA SANTANA",
+      "idade": 22,
+      "formacao": "Técnico em Administração",
+      "experiencia": "Auxiliar administrativo — 2 anos",
+      "hard": [
+        "Excel intermediário",
+        "sistemas ERP",
+        "arquivo",
+        "emissão de documentos"
+      ],
+      "soft": [
+        "organização",
+        "pontualidade",
+        "foco",
+        "trabalho em equipe"
+      ],
+      "teste": 88,
+      "entrevista": 79,
+      "pretensao": 2300,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Comunicação com público"
+    },
+    {
+      "id": "CAND-005",
+      "nome": "CAIO DE MOURA FREITAS",
+      "idade": 21,
+      "formacao": "Ensino Médio + cursos de atendimento",
+      "experiencia": "Atendente — 1 ano e 4 meses",
+      "hard": [
+        "Atendimento",
+        "Word",
+        "caixa",
+        "cadastro",
+        "Excel básico"
+      ],
+      "soft": [
+        "comunicação",
+        "persuasão",
+        "iniciativa",
+        "relacionamento"
+      ],
+      "teste": 68,
+      "entrevista": 91,
+      "pretensao": 2000,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Excel e rotinas administrativas"
+    },
+    {
+      "id": "CAND-006",
+      "nome": "CHRISLIE JEAN CHARLES",
+      "idade": 23,
+      "formacao": "Técnico em Administração + curso de Excel",
+      "experiencia": "Auxiliar financeiro — 1 ano",
+      "hard": [
+        "Excel intermediário",
+        "lançamentos",
+        "conferência",
+        "relatórios"
+      ],
+      "soft": [
+        "responsabilidade",
+        "atenção",
+        "colaboração",
+        "persistência"
+      ],
+      "teste": 89,
+      "entrevista": 86,
+      "pretensao": 2400,
+      "disponibilidade": "30 dias",
+      "desenvolvimento": "Sistemas ERP e processos internos"
+    },
+    {
+      "id": "CAND-007",
+      "nome": "DAVI LUIS DA SILVA SANTOS",
+      "idade": 20,
+      "formacao": "Ensino Médio + Técnico em Administração em andamento",
+      "experiencia": "Estagiário administrativo — 10 meses",
+      "hard": [
+        "Excel intermediário",
+        "Word",
+        "planilhas",
+        "arquivo"
+      ],
+      "soft": [
+        "aprendizagem",
+        "organização",
+        "cooperação",
+        "proatividade"
+      ],
+      "teste": 81,
+      "entrevista": 87,
+      "pretensao": 1950,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Atendimento e comunicação profissional"
+    },
+    {
+      "id": "CAND-008",
+      "nome": "DAVID MAFUTA CARDOSO",
+      "idade": 24,
+      "formacao": "Técnico em Administração",
+      "experiencia": "Assistente administrativo — 2 anos e 6 meses",
+      "hard": [
+        "ERP",
+        "Excel intermediário",
+        "compras",
+        "controle de estoque"
+      ],
+      "soft": [
+        "liderança",
+        "organização",
+        "negociação",
+        "resolução de problemas"
+      ],
+      "teste": 90,
+      "entrevista": 83,
+      "pretensao": 2500,
+      "disponibilidade": "15 dias",
+      "desenvolvimento": "Relatórios gerenciais e comunicação escrita"
+    },
+    {
+      "id": "CAND-009",
+      "nome": "EMILIO NDENDELAI SALIMBOJI",
+      "idade": 22,
+      "formacao": "Ensino Médio + Técnico em Administração",
+      "experiencia": "Auxiliar de escritório — 1 ano",
+      "hard": [
+        "Word",
+        "Excel básico",
+        "arquivo",
+        "atendimento"
+      ],
+      "soft": [
+        "cordialidade",
+        "dedicação",
+        "trabalho em equipe",
+        "adaptabilidade"
+      ],
+      "teste": 70,
+      "entrevista": 89,
+      "pretensao": 2050,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Excel e sistemas administrativos"
+    },
+    {
+      "id": "CAND-010",
+      "nome": "ENZO GABRIEL PINHEIRO BRITO",
+      "idade": 20,
+      "formacao": "Técnico em Administração",
+      "experiencia": "Estágio em RH — 1 ano",
+      "hard": [
+        "Excel intermediário",
+        "cadastro",
+        "planilhas",
+        "apoio em seleção"
+      ],
+      "soft": [
+        "escuta",
+        "organização",
+        "discrição",
+        "comunicação"
+      ],
+      "teste": 84,
+      "entrevista": 94,
+      "pretensao": 2200,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Rotinas financeiras"
+    },
+    {
+      "id": "CAND-011",
+      "nome": "GABRIEL ANTONIO SANTOS SILVA",
+      "idade": 21,
+      "formacao": "Técnico em Administração + Excel avançado",
+      "experiencia": "Assistente administrativo — 1 ano e 8 meses",
+      "hard": [
+        "Excel avançado",
+        "PowerPoint",
+        "ERP",
+        "relatórios"
+      ],
+      "soft": [
+        "raciocínio",
+        "organização",
+        "iniciativa",
+        "colaboração"
+      ],
+      "teste": 97,
+      "entrevista": 81,
+      "pretensao": 2450,
+      "disponibilidade": "15 dias",
+      "desenvolvimento": "Comunicação em reuniões"
+    },
+    {
+      "id": "CAND-012",
+      "nome": "GABRIEL ROSA DOS SANTOS LOPES",
+      "idade": 20,
+      "formacao": "Ensino Médio + cursos de informática",
+      "experiencia": "Atendente — 1 ano",
+      "hard": [
+        "Excel básico",
+        "Word",
+        "atendimento",
+        "cadastro"
+      ],
+      "soft": [
+        "empatia",
+        "comunicação",
+        "paciência",
+        "trabalho em equipe"
+      ],
+      "teste": 72,
+      "entrevista": 96,
+      "pretensao": 1950,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Excel e análise de dados"
+    },
+    {
+      "id": "CAND-013",
+      "nome": "GEOVANA ALVES DA SILVA",
+      "idade": 22,
+      "formacao": "Técnico em Administração",
+      "experiencia": "Assistente de escritório — 1 ano e 6 meses",
+      "hard": [
+        "Excel intermediário",
+        "documentos",
+        "agenda",
+        "compras"
+      ],
+      "soft": [
+        "organização",
+        "atenção",
+        "comunicação",
+        "confiabilidade"
+      ],
+      "teste": 87,
+      "entrevista": 90,
+      "pretensao": 2300,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Negociação com fornecedores"
+    },
+    {
+      "id": "CAND-014",
+      "nome": "JOSE MARCELO LEITE DE OLIVEIRA FILHO",
+      "idade": 25,
+      "formacao": "Tecnólogo em Gestão Comercial",
+      "experiencia": "Assistente comercial — 3 anos",
+      "hard": [
+        "CRM",
+        "Excel intermediário",
+        "propostas",
+        "indicadores"
+      ],
+      "soft": [
+        "negociação",
+        "persuasão",
+        "liderança",
+        "foco em resultados"
+      ],
+      "teste": 91,
+      "entrevista": 78,
+      "pretensao": 2700,
+      "disponibilidade": "30 dias",
+      "desenvolvimento": "Rotinas administrativas e trabalho colaborativo"
+    },
+    {
+      "id": "CAND-015",
+      "nome": "JOSELLY PALOMA MONTEIRO GOMES",
+      "idade": 21,
+      "formacao": "Técnico em Administração",
+      "experiencia": "Recepcionista — 1 ano e 2 meses",
+      "hard": [
+        "Atendimento",
+        "agenda",
+        "Word",
+        "Excel básico"
+      ],
+      "soft": [
+        "cordialidade",
+        "comunicação",
+        "organização",
+        "empatia"
+      ],
+      "teste": 74,
+      "entrevista": 95,
+      "pretensao": 2150,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Excel e controles de documentos"
+    },
+    {
+      "id": "CAND-016",
+      "nome": "KAUAN DE SOUZA DA COSTA",
+      "idade": 20,
+      "formacao": "Ensino Médio + Técnico em Administração",
+      "experiencia": "Auxiliar de logística — 1 ano",
+      "hard": [
+        "Estoque",
+        "planilhas",
+        "conferência",
+        "sistema interno"
+      ],
+      "soft": [
+        "disciplina",
+        "agilidade",
+        "cooperação",
+        "resolução de problemas"
+      ],
+      "teste": 79,
+      "entrevista": 82,
+      "pretensao": 2050,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Atendimento e redação profissional"
+    },
+    {
+      "id": "CAND-017",
+      "nome": "KAUAN SANTOS ANSELMO",
+      "idade": 19,
+      "formacao": "Técnico em Administração em andamento",
+      "experiencia": "Estágio administrativo — 5 meses",
+      "hard": [
+        "Excel básico",
+        "Google Sheets",
+        "arquivos"
+      ],
+      "soft": [
+        "curiosidade",
+        "proatividade",
+        "comunicação",
+        "aprendizagem"
+      ],
+      "teste": 65,
+      "entrevista": 93,
+      "pretensao": 1800,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Excel e experiência com ERP"
+    },
+    {
+      "id": "CAND-018",
+      "nome": "LAURA BORGES HONORIO",
+      "idade": 23,
+      "formacao": "Tecnólogo em Processos Gerenciais",
+      "experiencia": "Assistente administrativa — 2 anos",
+      "hard": [
+        "Excel avançado",
+        "ERP",
+        "relatórios",
+        "compras"
+      ],
+      "soft": [
+        "organização",
+        "liderança",
+        "análise",
+        "comunicação"
+      ],
+      "teste": 93,
+      "entrevista": 89,
+      "pretensao": 2600,
+      "disponibilidade": "15 dias",
+      "desenvolvimento": "Atendimento ao cliente"
+    },
+    {
+      "id": "CAND-019",
+      "nome": "LAURA MELISSA SENA DE SOUSA",
+      "idade": 20,
+      "formacao": "Técnico em Administração",
+      "experiencia": "Auxiliar de RH — 1 ano",
+      "hard": [
+        "Excel intermediário",
+        "cadastro",
+        "documentos",
+        "entrevistas iniciais"
+      ],
+      "soft": [
+        "escuta",
+        "discrição",
+        "organização",
+        "empatia"
+      ],
+      "teste": 83,
+      "entrevista": 97,
+      "pretensao": 2200,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Rotinas financeiras e indicadores"
+    },
+    {
+      "id": "CAND-020",
+      "nome": "LAVINIA ROCHA DE OLIVEIRA",
+      "idade": 22,
+      "formacao": "Técnico em Administração + curso de Excel",
+      "experiencia": "Assistente administrativo — 1 ano e 3 meses",
+      "hard": [
+        "Excel avançado",
+        "PowerPoint",
+        "arquivos",
+        "controles"
+      ],
+      "soft": [
+        "comunicação",
+        "criatividade",
+        "organização",
+        "iniciativa"
+      ],
+      "teste": 95,
+      "entrevista": 91,
+      "pretensao": 2400,
+      "disponibilidade": "15 dias",
+      "desenvolvimento": "ERP e processos financeiros"
+    },
+    {
+      "id": "CAND-021",
+      "nome": "LORENZO DE PAULA",
+      "idade": 21,
+      "formacao": "Ensino Médio + Técnico em Administração",
+      "experiencia": "Auxiliar administrativo — 1 ano",
+      "hard": [
+        "Excel intermediário",
+        "Word",
+        "estoque",
+        "documentos"
+      ],
+      "soft": [
+        "agilidade",
+        "trabalho em equipe",
+        "foco",
+        "adaptabilidade"
+      ],
+      "teste": 85,
+      "entrevista": 76,
+      "pretensao": 2100,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Comunicação e atendimento"
+    },
+    {
+      "id": "CAND-022",
+      "nome": "LUCAS DE LIRA BRITO",
+      "idade": 20,
+      "formacao": "Técnico em Administração",
+      "experiencia": "Estagiário financeiro — 9 meses",
+      "hard": [
+        "Excel intermediário",
+        "lançamentos",
+        "conciliação básica"
+      ],
+      "soft": [
+        "atenção",
+        "concentração",
+        "responsabilidade",
+        "aprendizagem"
+      ],
+      "teste": 86,
+      "entrevista": 72,
+      "pretensao": 2000,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Comunicação e trabalho em equipe"
+    },
+    {
+      "id": "CAND-023",
+      "nome": "LUCAS SOUZA FERREIRA",
+      "idade": 23,
+      "formacao": "Técnico em Administração + curso de Power BI",
+      "experiencia": "Assistente administrativo — 2 anos",
+      "hard": [
+        "Excel avançado",
+        "Power BI básico",
+        "indicadores",
+        "ERP"
+      ],
+      "soft": [
+        "análise",
+        "organização",
+        "autonomia",
+        "colaboração"
+      ],
+      "teste": 96,
+      "entrevista": 85,
+      "pretensao": 2500,
+      "disponibilidade": "30 dias",
+      "desenvolvimento": "Comunicação com públicos não técnicos"
+    },
+    {
+      "id": "CAND-024",
+      "nome": "LUKAS GEOVANIO HORACIO DA SILVA",
+      "idade": 24,
+      "formacao": "Técnico em Administração",
+      "experiencia": "Assistente de operações — 2 anos",
+      "hard": [
+        "ERP",
+        "estoque",
+        "Excel básico",
+        "processos"
+      ],
+      "soft": [
+        "disciplina",
+        "liderança",
+        "solução de problemas",
+        "objetividade"
+      ],
+      "teste": 84,
+      "entrevista": 80,
+      "pretensao": 2350,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Excel e relatórios"
+    },
+    {
+      "id": "CAND-025",
+      "nome": "MATHIAS GABRIEL ARMOA REYES",
+      "idade": 19,
+      "formacao": "Ensino Médio + cursos de informática",
+      "experiencia": "Estágio administrativo — 7 meses",
+      "hard": [
+        "Word",
+        "Excel básico",
+        "Google Drive"
+      ],
+      "soft": [
+        "criatividade",
+        "aprendizagem",
+        "colaboração",
+        "iniciativa"
+      ],
+      "teste": 69,
+      "entrevista": 90,
+      "pretensao": 1850,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Excel intermediário"
+    },
+    {
+      "id": "CAND-026",
+      "nome": "MIGUEL GALDINO MARQUES",
+      "idade": 22,
+      "formacao": "Técnico em Administração",
+      "experiencia": "Auxiliar administrativo — 1 ano e 10 meses",
+      "hard": [
+        "Excel intermediário",
+        "ERP",
+        "compras",
+        "arquivos"
+      ],
+      "soft": [
+        "negociação",
+        "responsabilidade",
+        "organização",
+        "comunicação"
+      ],
+      "teste": 88,
+      "entrevista": 84,
+      "pretensao": 2250,
+      "disponibilidade": "15 dias",
+      "desenvolvimento": "Indicadores e apresentações"
+    },
+    {
+      "id": "CAND-027",
+      "nome": "NAYARA PINOS ORTIZ",
+      "idade": 21,
+      "formacao": "Técnico em Administração + curso de atendimento",
+      "experiencia": "Assistente de atendimento — 1 ano e 6 meses",
+      "hard": [
+        "CRM",
+        "Excel intermediário",
+        "atendimento",
+        "cadastro"
+      ],
+      "soft": [
+        "empatia",
+        "comunicação",
+        "resolução de conflitos",
+        "flexibilidade"
+      ],
+      "teste": 80,
+      "entrevista": 98,
+      "pretensao": 2350,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Excel avançado e relatórios"
+    },
+    {
+      "id": "CAND-028",
+      "nome": "OLMAICA FLORISMAR",
+      "idade": 23,
+      "formacao": "Técnico em Administração",
+      "experiencia": "Auxiliar de escritório — 1 ano e 4 meses",
+      "hard": [
+        "Word",
+        "Excel intermediário",
+        "documentos",
+        "agenda"
+      ],
+      "soft": [
+        "atenção",
+        "pontualidade",
+        "cooperação",
+        "responsabilidade"
+      ],
+      "teste": 78,
+      "entrevista": 88,
+      "pretensao": 2150,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Sistemas ERP"
+    },
+    {
+      "id": "CAND-029",
+      "nome": "ORLIANNY SOPHIA RUJANO SALAZAR",
+      "idade": 20,
+      "formacao": "Técnico em Administração em andamento",
+      "experiencia": "Estagiária administrativa — 8 meses",
+      "hard": [
+        "Google Workspace",
+        "Excel básico",
+        "atendimento"
+      ],
+      "soft": [
+        "comunicação",
+        "aprendizagem",
+        "empatia",
+        "organização"
+      ],
+      "teste": 73,
+      "entrevista": 94,
+      "pretensao": 1900,
+      "disponibilidade": "imediata",
+      "desenvolvimento": "Excel e processos administrativos"
+    },
+    {
+      "id": "CAND-030",
+      "nome": "RONALDY SADRAQUE ARAUJO DA SILVA",
+      "idade": 24,
+      "formacao": "Técnico em Administração + curso de logística",
+      "experiencia": "Assistente de operações — 2 anos e 4 meses",
+      "hard": [
+        "ERP",
+        "Excel intermediário",
+        "estoque",
+        "indicadores"
+      ],
+      "soft": [
+        "liderança",
+        "disciplina",
+        "resolução de problemas",
+        "trabalho em equipe"
+      ],
+      "teste": 92,
+      "entrevista": 87,
+      "pretensao": 2450,
+      "disponibilidade": "15 dias",
+      "desenvolvimento": "Comunicação escrita e atendimento"
+    }
+  ]
+}
