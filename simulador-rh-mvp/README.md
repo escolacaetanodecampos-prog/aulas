@@ -1,16 +1,36 @@
-# Simulador RH — MVP
+# Simulador RH — Recuperação de Administração
 
-Protótipo pedagógico para Introdução à Administração de Empresas.
+Aplicação pedagógica para o componente **Introdução à Administração de Empresas**, com foco em recrutamento, seleção, CHA e treinamento/desenvolvimento.
 
-Fluxo: recrutamento → triagem → CHA → teste/entrevista → decisão → treinamento → devolutiva.
+## Fluxo
+1. Identificação do participante
+2. Briefing da vaga
+3. Recrutamento
+4. Triagem de 30 candidatos fictícios
+5. CHA
+6. Teste técnico
+7. Entrevista/comparação de evidências
+8. Escolha de finalistas e contratação
+9. Treinamento e desenvolvimento
+10. Devolutiva por descritor
 
-Os 30 candidatos são personagens fictícios. O sistema não grava os nomes dos alunos no repositório; o participante informa seu código no início.
+## Critérios de análise
+A matriz de referência utiliza: hard skills 30%, soft skills 30%, experiência 20%, formação 10% e entrevista 10%. O sistema também registra o percurso e as respostas do estudante.
 
-Próximas etapas: associar os 30 retratos, criar teste técnico interativo, banco de perguntas de entrevista, matriz de pontuação por descritor, painel do professor e integração opcional com Google Sheets/Apps Script.
+## Privacidade
+Os nomes dos estudantes das turmas não são publicados no código do aplicativo. O estudante utiliza um código distribuído pelo professor. A planilha privada de associação código↔estudante deve ser mantida fora do repositório público.
 
+## Retratos
+Os 30 retratos fornecidos pelo professor foram preparados em arquivos individuais. A pasta pública do aplicativo atualmente usa identificação por iniciais enquanto os arquivos de imagem não são incorporados ao repositório.
 
 ## Painel do professor
-`professor.html` permite importar os relatórios JSON exportados pelos estudantes e consolidar as médias por descritor. Os arquivos são processados localmente no navegador.
+Abra `professor.html` para importar os relatórios JSON baixados pelos estudantes. O processamento ocorre localmente no navegador.
 
 ## Publicação
-Foi incluído um workflow para GitHub Pages. Após a entrada da alteração na `main` e a configuração do Pages no repositório, o workflow publica automaticamente a pasta `simulador-rh-mvp`.
+O workflow `.github/workflows/simulador-rh-pages.yml` publica a pasta do simulador no GitHub Pages quando alterações chegam à `main`.
+
+## Materiais externos
+O professor pode usar a planilha de distribuição de códigos, o guia DOCX/PDF e o pacote de retratos preparados para a aplicação presencial.
+
+## Uso pedagógico
+A fotografia dos personagens não deve ser utilizada como critério de seleção. As decisões devem ser justificadas por formação, experiência, competências, resultados e necessidades de desenvolvimento.
