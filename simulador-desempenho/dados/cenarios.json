@@ -1,0 +1,380 @@
+{
+  "colaborador": {
+    "id": "CAND-027",
+    "nome": "NAYARA PINOS ORTIZ",
+    "cargo": "Assistente Administrativo",
+    "tempoEmpresa": "3 meses",
+    "historico": "Contratada após o processo de recrutamento e seleção do simulador anterior.",
+    "pontosFortes": [
+      "trabalho em equipe",
+      "domínio técnico",
+      "organização"
+    ],
+    "desenvolvimento": [
+      "comunicação",
+      "proatividade"
+    ]
+  },
+  "etapas": [
+    {
+      "id": "s21",
+      "codigo": "S21",
+      "titulo": "Conceito e estrutura da avaliação de desempenho",
+      "descricao": "Antes de avaliar, o gestor precisa saber por que avalia, o que observa e quais evidências sustentam sua análise.",
+      "questoes": [
+        {
+          "id": "s21q1",
+          "pergunta": "Qual é a finalidade central da avaliação de desempenho neste cenário?",
+          "opcoes": [
+            [
+              "a",
+              "Punir sempre que houver resultado abaixo do esperado.",
+              0
+            ],
+            [
+              "b",
+              "Acompanhar resultados, reconhecer pontos fortes e orientar melhorias e desenvolvimento.",
+              1
+            ],
+            [
+              "c",
+              "Substituir o diálogo por uma nota final.",
+              0
+            ],
+            [
+              "d",
+              "Comparar pessoas apenas para decidir quem será demitido.",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "s21q2",
+          "pergunta": "Qual conjunto apresenta elementos coerentes de uma estrutura avaliativa?",
+          "opcoes": [
+            [
+              "a",
+              "Critérios claros, evidências observáveis, período definido e devolutiva.",
+              1
+            ],
+            [
+              "b",
+              "Opinião pessoal, comparação informal e memória do gestor.",
+              0
+            ],
+            [
+              "c",
+              "Apenas produtividade, sem considerar contexto ou desenvolvimento.",
+              0
+            ],
+            [
+              "d",
+              "Nota final sem critérios previamente comunicados.",
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "codigo": "S22",
+      "titulo": "Métodos, erros e desafios da avaliação",
+      "descricao": "Métodos diferentes produzem perspectivas diferentes. Além disso, erros de julgamento podem comprometer a qualidade da avaliação.",
+      "questoes": [
+        {
+          "id": "s22q1",
+          "pergunta": "A organização quer reunir percepções do gestor, colegas, subordinados e do próprio colaborador. Qual abordagem é a mais adequada?",
+          "opcoes": [
+            [
+              "a",
+              "Autoavaliação exclusiva.",
+              0
+            ],
+            [
+              "b",
+              "Avaliação 360°.",
+              1
+            ],
+            [
+              "c",
+              "Avaliação somente do gestor.",
+              0
+            ],
+            [
+              "d",
+              "Avaliação sem critérios.",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "s22q2",
+          "pergunta": "O gestor dá uma nota baixa porque se lembra principalmente de um erro ocorrido ontem. Que erro aparece nessa situação?",
+          "opcoes": [
+            [
+              "a",
+              "Efeito recência.",
+              1
+            ],
+            [
+              "b",
+              "Meta SMART.",
+              0
+            ],
+            [
+              "c",
+              "Critério mensurável.",
+              0
+            ],
+            [
+              "d",
+              "Feedback contínuo.",
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "codigo": "S23",
+      "titulo": "Competências, metas e feedback",
+      "descricao": "A avaliação deve transformar evidências em aprendizagem: reconhecer competências, identificar lacunas e estabelecer caminhos de desenvolvimento.",
+      "questoes": [
+        {
+          "id": "s23q1",
+          "pergunta": "Nayara domina ferramentas administrativas, mas tem dificuldade em comunicar atualizações à equipe. Qual interpretação é mais adequada?",
+          "opcoes": [
+            [
+              "a",
+              "Existe competência técnica e uma oportunidade de desenvolvimento socioemocional.",
+              1
+            ],
+            [
+              "b",
+              "Somente a competência técnica pode ser considerada.",
+              0
+            ],
+            [
+              "c",
+              "A dificuldade de comunicação é uma característica imutável.",
+              0
+            ],
+            [
+              "d",
+              "Não é possível observar comunicação no trabalho.",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "s23q2",
+          "pergunta": "Qual feedback é mais baseado em evidência?",
+          "opcoes": [
+            [
+              "a",
+              "'Você precisa melhorar seu jeito de trabalhar.'",
+              0
+            ],
+            [
+              "b",
+              "'Você é muito desorganizada.'",
+              0
+            ],
+            [
+              "c",
+              "'Nas duas últimas reuniões, as atualizações chegaram após o prazo combinado; vamos definir uma rotina de comunicação.'",
+              1
+            ],
+            [
+              "d",
+              "'Sua comunicação é ruim e sempre foi assim.'",
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "codigo": "S24",
+      "titulo": "Avaliação de desempenho na prática",
+      "descricao": "Agora você transforma uma necessidade observada em uma meta concreta e escolhe uma ação de desenvolvimento.",
+      "questoes": [
+        {
+          "id": "s24q1",
+          "pergunta": "Qual meta está mais próxima do padrão SMART para desenvolver comunicação?",
+          "opcoes": [
+            [
+              "a",
+              "Melhorar bastante a comunicação.",
+              0
+            ],
+            [
+              "b",
+              "Ser mais comunicativa quando possível.",
+              0
+            ],
+            [
+              "c",
+              "Participar de pelo menos duas reuniões por mês e apresentar uma atualização de atividades durante os próximos três meses.",
+              1
+            ],
+            [
+              "d",
+              "Tentar se comunicar melhor com todos.",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "s24q2",
+          "pergunta": "Qual ação de desenvolvimento é mais coerente com a necessidade identificada?",
+          "opcoes": [
+            [
+              "a",
+              "Ignorar a dificuldade até a próxima avaliação anual.",
+              0
+            ],
+            [
+              "b",
+              "Oferecer prática orientada, feedback periódico e oportunidade de apresentação.",
+              1
+            ],
+            [
+              "c",
+              "Retirar todas as tarefas de comunicação.",
+              0
+            ],
+            [
+              "d",
+              "Aplicar uma punição sem plano de melhoria.",
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "codigo": "S25",
+      "titulo": "Fundamentos da liderança",
+      "descricao": "Liderar envolve adequar a postura às necessidades da equipe, mantendo clareza de objetivos, acompanhamento e espaço para autonomia.",
+      "questoes": [
+        {
+          "id": "s25q1",
+          "pergunta": "Uma equipe experiente precisa de autonomia, mas o gestor continua acompanhando resultados e oferecendo orientação. Qual postura é coerente?",
+          "opcoes": [
+            [
+              "a",
+              "Concentrar todas as decisões no gestor.",
+              0
+            ],
+            [
+              "b",
+              "Delegar responsabilidades com acompanhamento e orientação.",
+              1
+            ],
+            [
+              "c",
+              "Evitar qualquer acompanhamento.",
+              0
+            ],
+            [
+              "d",
+              "Aplicar a mesma orientação detalhada em qualquer situação.",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "s25q2",
+          "pergunta": "Qual comportamento demonstra liderança orientada ao desenvolvimento?",
+          "opcoes": [
+            [
+              "a",
+              "Dar ordens e encerrar a conversa.",
+              0
+            ],
+            [
+              "b",
+              "Definir expectativas, acompanhar evidências e apoiar a evolução do colaborador.",
+              1
+            ],
+            [
+              "c",
+              "Evitar conversas difíceis.",
+              0
+            ],
+            [
+              "d",
+              "Avaliar apenas o resultado final.",
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "codigo": "S26",
+      "titulo": "Liderança e engajamento",
+      "descricao": "O gestor encerra o ciclo criando condições para que o colaborador compreenda objetivos, perceba reconhecimento e participe do próprio desenvolvimento.",
+      "questoes": [
+        {
+          "id": "s26q1",
+          "pergunta": "Qual ação tende a favorecer maior engajamento?",
+          "opcoes": [
+            [
+              "a",
+              "Definir expectativas claras, reconhecer contribuições e manter diálogo sobre desenvolvimento.",
+              1
+            ],
+            [
+              "b",
+              "Evitar feedback para não gerar desconforto.",
+              0
+            ],
+            [
+              "c",
+              "Usar somente cobrança de resultados.",
+              0
+            ],
+            [
+              "d",
+              "Impedir participação nas decisões relacionadas ao trabalho.",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "s26q2",
+          "pergunta": "Ao final do ciclo, qual atitude fecha melhor o processo de gestão de desempenho?",
+          "opcoes": [
+            [
+              "a",
+              "Arquivar a nota e esperar o próximo ciclo.",
+              0
+            ],
+            [
+              "b",
+              "Retomar evidências, combinar próximos passos e acompanhar as metas.",
+              1
+            ],
+            [
+              "c",
+              "Comparar publicamente os colaboradores.",
+              0
+            ],
+            [
+              "d",
+              "Mudar as metas depois de concluídas para dificultar a avaliação.",
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
