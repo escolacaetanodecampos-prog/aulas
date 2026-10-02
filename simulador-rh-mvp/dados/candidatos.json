@@ -47,7 +47,8 @@
       "entrevista": 88,
       "pretensao": 1850,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Aperfeiçoar Excel e rotinas financeiras"
+      "desenvolvimento": "Aperfeiçoar Excel e rotinas financeiras",
+      "foto": "CAND-001_ANA_LUIZA_OLIVEIRA_DA_SILVA.jpg"
     },
     {
       "id": "CAND-002",
@@ -71,7 +72,8 @@
       "entrevista": 92,
       "pretensao": 2100,
       "disponibilidade": "15 dias",
-      "desenvolvimento": "Excel e controles administrativos"
+      "desenvolvimento": "Excel e controles administrativos",
+      "foto": "CAND-002_ANA_VITORIA_ALVES_MALAMAN.jpg"
     },
     {
       "id": "CAND-003",
@@ -95,7 +97,8 @@
       "entrevista": 74,
       "pretensao": 1900,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Comunicação em situações de atendimento"
+      "desenvolvimento": "Comunicação em situações de atendimento",
+      "foto": "CAND-003_ANTONNY_GABRIEL_DIAS_SILVA.jpg"
     },
     {
       "id": "CAND-004",
@@ -119,7 +122,8 @@
       "entrevista": 79,
       "pretensao": 2300,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Comunicação com público"
+      "desenvolvimento": "Comunicação com público",
+      "foto": "CAND-004_BRENO_PEREIRA_SANTANA.jpg"
     },
     {
       "id": "CAND-005",
@@ -144,7 +148,8 @@
       "entrevista": 91,
       "pretensao": 2000,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Excel e rotinas administrativas"
+      "desenvolvimento": "Excel e rotinas administrativas",
+      "foto": "CAND-005_CAIO_DE_MOURA_FREITAS.jpg"
     },
     {
       "id": "CAND-006",
@@ -168,7 +173,8 @@
       "entrevista": 86,
       "pretensao": 2400,
       "disponibilidade": "30 dias",
-      "desenvolvimento": "Sistemas ERP e processos internos"
+      "desenvolvimento": "Sistemas ERP e processos internos",
+      "foto": "CAND-006_CHRISLIE_JEAN_CHARLES.jpg"
     },
     {
       "id": "CAND-007",
@@ -192,7 +198,8 @@
       "entrevista": 87,
       "pretensao": 1950,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Atendimento e comunicação profissional"
+      "desenvolvimento": "Atendimento e comunicação profissional",
+      "foto": "CAND-007_DAVI_LUIS_DA_SILVA_SANTOS.jpg"
     },
     {
       "id": "CAND-008",
@@ -216,7 +223,8 @@
       "entrevista": 83,
       "pretensao": 2500,
       "disponibilidade": "15 dias",
-      "desenvolvimento": "Relatórios gerenciais e comunicação escrita"
+      "desenvolvimento": "Relatórios gerenciais e comunicação escrita",
+      "foto": "CAND-008_DAVID_MAFUTA_CARDOSO.jpg"
     },
     {
       "id": "CAND-009",
@@ -240,7 +248,8 @@
       "entrevista": 89,
       "pretensao": 2050,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Excel e sistemas administrativos"
+      "desenvolvimento": "Excel e sistemas administrativos",
+      "foto": "CAND-009_EMILIO_NDENDELAI_SALIMBOJI.jpg"
     },
     {
       "id": "CAND-010",
@@ -264,7 +273,8 @@
       "entrevista": 94,
       "pretensao": 2200,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Rotinas financeiras"
+      "desenvolvimento": "Rotinas financeiras",
+      "foto": "CAND-010_ENZO_GABRIEL_PINHEIRO_BRITO.jpg"
     },
     {
       "id": "CAND-011",
@@ -288,7 +298,8 @@
       "entrevista": 81,
       "pretensao": 2450,
       "disponibilidade": "15 dias",
-      "desenvolvimento": "Comunicação em reuniões"
+      "desenvolvimento": "Comunicação em reuniões",
+      "foto": "CAND-011_GABRIEL_ANTONIO_SANTOS_SILVA.jpg"
     },
     {
       "id": "CAND-012",
@@ -312,7 +323,8 @@
       "entrevista": 96,
       "pretensao": 1950,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Excel e análise de dados"
+      "desenvolvimento": "Excel e análise de dados",
+      "foto": "CAND-012_GABRIEL_ROSA_DOS_SANTOS_LOPES.jpg"
     },
     {
       "id": "CAND-013",
@@ -336,7 +348,8 @@
       "entrevista": 90,
       "pretensao": 2300,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Negociação com fornecedores"
+      "desenvolvimento": "Negociação com fornecedores",
+      "foto": "CAND-013_GEOVANA_ALVES_DA_SILVA.jpg"
     },
     {
       "id": "CAND-014",
@@ -360,7 +373,8 @@
       "entrevista": 78,
       "pretensao": 2700,
       "disponibilidade": "30 dias",
-      "desenvolvimento": "Rotinas administrativas e trabalho colaborativo"
+      "desenvolvimento": "Rotinas administrativas e trabalho colaborativo",
+      "foto": "CAND-014_JOSE_MARCELO_LEITE_DE_OLIVEIRA_FILHO.jpg"
     },
     {
       "id": "CAND-015",
@@ -384,7 +398,8 @@
       "entrevista": 95,
       "pretensao": 2150,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Excel e controles de documentos"
+      "desenvolvimento": "Excel e controles de documentos",
+      "foto": "CAND-015_JOSELLY_PALOMA_MONTEIRO_GOMES.jpg"
     },
     {
       "id": "CAND-016",
@@ -408,7 +423,8 @@
       "entrevista": 82,
       "pretensao": 2050,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Atendimento e redação profissional"
+      "desenvolvimento": "Atendimento e redação profissional",
+      "foto": "CAND-016_KAUAN_DE_SOUZA_DA_COSTA.jpg"
     },
     {
       "id": "CAND-017",
@@ -431,7 +447,8 @@
       "entrevista": 93,
       "pretensao": 1800,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Excel e experiência com ERP"
+      "desenvolvimento": "Excel e experiência com ERP",
+      "foto": "CAND-017_KAUAN_SANTOS_ANSELMO.jpg"
     },
     {
       "id": "CAND-018",
@@ -455,7 +472,8 @@
       "entrevista": 89,
       "pretensao": 2600,
       "disponibilidade": "15 dias",
-      "desenvolvimento": "Atendimento ao cliente"
+      "desenvolvimento": "Atendimento ao cliente",
+      "foto": "CAND-018_LAURA_BORGES_HONORIO.jpg"
     },
     {
       "id": "CAND-019",
@@ -479,7 +497,8 @@
       "entrevista": 97,
       "pretensao": 2200,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Rotinas financeiras e indicadores"
+      "desenvolvimento": "Rotinas financeiras e indicadores",
+      "foto": "CAND-019_LAURA_MELISSA_SENA_DE_SOUSA.jpg"
     },
     {
       "id": "CAND-020",
@@ -503,7 +522,8 @@
       "entrevista": 91,
       "pretensao": 2400,
       "disponibilidade": "15 dias",
-      "desenvolvimento": "ERP e processos financeiros"
+      "desenvolvimento": "ERP e processos financeiros",
+      "foto": "CAND-020_LAVINIA_ROCHA_DE_OLIVEIRA.jpg"
     },
     {
       "id": "CAND-021",
@@ -527,7 +547,8 @@
       "entrevista": 76,
       "pretensao": 2100,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Comunicação e atendimento"
+      "desenvolvimento": "Comunicação e atendimento",
+      "foto": "CAND-021_LORENZO_DE_PAULA.jpg"
     },
     {
       "id": "CAND-022",
@@ -550,7 +571,8 @@
       "entrevista": 72,
       "pretensao": 2000,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Comunicação e trabalho em equipe"
+      "desenvolvimento": "Comunicação e trabalho em equipe",
+      "foto": "CAND-022_LUCAS_DE_LIRA_BRITO.jpg"
     },
     {
       "id": "CAND-023",
@@ -574,7 +596,8 @@
       "entrevista": 85,
       "pretensao": 2500,
       "disponibilidade": "30 dias",
-      "desenvolvimento": "Comunicação com públicos não técnicos"
+      "desenvolvimento": "Comunicação com públicos não técnicos",
+      "foto": "CAND-023_LUCAS_SOUZA_FERREIRA.jpg"
     },
     {
       "id": "CAND-024",
@@ -598,7 +621,8 @@
       "entrevista": 80,
       "pretensao": 2350,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Excel e relatórios"
+      "desenvolvimento": "Excel e relatórios",
+      "foto": "CAND-024_LUKAS_GEOVANIO_HORACIO_DA_SILVA.jpg"
     },
     {
       "id": "CAND-025",
@@ -621,7 +645,8 @@
       "entrevista": 90,
       "pretensao": 1850,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Excel intermediário"
+      "desenvolvimento": "Excel intermediário",
+      "foto": "CAND-025_MATHIAS_GABRIEL_ARMOA_REYES.jpg"
     },
     {
       "id": "CAND-026",
@@ -645,7 +670,8 @@
       "entrevista": 84,
       "pretensao": 2250,
       "disponibilidade": "15 dias",
-      "desenvolvimento": "Indicadores e apresentações"
+      "desenvolvimento": "Indicadores e apresentações",
+      "foto": "CAND-026_MIGUEL_GALDINO_MARQUES.jpg"
     },
     {
       "id": "CAND-027",
@@ -669,7 +695,8 @@
       "entrevista": 98,
       "pretensao": 2350,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Excel avançado e relatórios"
+      "desenvolvimento": "Excel avançado e relatórios",
+      "foto": "CAND-027_NAYARA_PINOS_ORTIZ.jpg"
     },
     {
       "id": "CAND-028",
@@ -693,7 +720,8 @@
       "entrevista": 88,
       "pretensao": 2150,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Sistemas ERP"
+      "desenvolvimento": "Sistemas ERP",
+      "foto": "CAND-028_OLMAICA_FLORISMAR.jpg"
     },
     {
       "id": "CAND-029",
@@ -716,7 +744,8 @@
       "entrevista": 94,
       "pretensao": 1900,
       "disponibilidade": "imediata",
-      "desenvolvimento": "Excel e processos administrativos"
+      "desenvolvimento": "Excel e processos administrativos",
+      "foto": "CAND-029_ORLIANNY_SOPHIA_RUJANO_SALAZAR.jpg"
     },
     {
       "id": "CAND-030",
@@ -740,7 +769,8 @@
       "entrevista": 87,
       "pretensao": 2450,
       "disponibilidade": "15 dias",
-      "desenvolvimento": "Comunicação escrita e atendimento"
+      "desenvolvimento": "Comunicação escrita e atendimento",
+      "foto": "CAND-030_RONALDY_SADRAQUE_ARAUJO_DA_SILVA.jpg"
     }
   ]
 }
