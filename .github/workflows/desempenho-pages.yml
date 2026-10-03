@@ -1,0 +1,49 @@
+name: Publicar simulador de desempenho
+
+on:
+  push:
+    branches: [desempenho-v2]
+    paths:
+      - "simulador-desempenho/**"
+      - "desempenho/**"
+      - ".github/workflows/desempenho-pages.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout desempenho-v2
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Assemble site and preserve REC_RH
+        run: |
+          mkdir -p _site
+          cp -R simulador-rh-mvp/. _site/
+          cp -R simulador-desempenho _site/simulador-desempenho
+          cp -R desempenho _site/desempenho
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
