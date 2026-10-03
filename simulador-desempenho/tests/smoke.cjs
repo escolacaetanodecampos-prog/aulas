@@ -14,7 +14,7 @@ class Storage {
   setItem(k, v) { this.data.set(k, String(v)); }
   removeItem(k) { this.data.delete(k); }
 }
-function node() { return { innerHTML: "", textContent: "", value: "", style: {}, scrollIntoView() {} }; }
+function node() { return { innerHTML: "", textContent: "", value: "", style: {}, hidden: false, focus() {}, scrollIntoView() {} }; }
 function runtime(storage = new Storage()) {
   const nodes = new Map();
   const app = node();
@@ -36,10 +36,16 @@ function runtime(storage = new Storage()) {
   vm.runInContext(fs.readFileSync(path.join(root, "app.js"), "utf8"), sim.context);
   await new Promise(resolve => setImmediate(resolve));
   assert.match(sim.app.innerHTML, /ANA CLARA SOUSA CRUZ/, "exibe os nomes cadastrados para seleção");
-  sim.context.document.querySelector("#nome").value = "__codigo__";
-  sim.context.document.querySelector("#codigo").value = "Estudante Teste";
+  assert.doesNotMatch(sim.app.innerHTML, /Código pedagógico|3ª série/, "não oferece código pedagógico ou terceira série");
+  assert.match(sim.app.innerHTML, /2º AT - Administração/);
+  assert.match(sim.app.innerHTML, /2º BT - Administração/);
+  sim.context.document.querySelector("#nome").value = "";
+  sim.context.document.querySelector("#turma").value = "";
+  vm.runInContext("iniciar()", sim.context);
+  assert.match(sim.nodes.get("#erroIdentificacao").textContent, /Selecione seu nome/);
+  sim.context.document.querySelector("#nome").value = "ANA CLARA SOUSA CRUZ";
   sim.context.document.querySelector("#serie").value = "2ª série – Ensino Médio";
-  sim.context.document.querySelector("#turma").value = "2º AT";
+  sim.context.document.querySelector("#turma").value = "2º AT - Administração";
   vm.runInContext("iniciar()", sim.context);
   const decisions = ["criteria", "balanced", "cha", "fact"];
   for (let i = 0; i < 6; i++) {
@@ -68,26 +74,39 @@ function runtime(storage = new Storage()) {
   assert.equal(rows[0].descritores["S25 • Ação do PDI"].nota, 100, "pontua a classificação da ação do PDI");
   assert.match(rows[0].producoes["S25 • Classificação — Específica"], /Classificação escolhida: Específica/, "relatório registra a frase e a classificação escolhida");
   assert.match(sim.app.innerHTML, /Dossiê completo/, "apresenta o dossiê final");
+  assert.match(sim.app.innerHTML, /Baixar relatório HTML/);
+  vm.runInContext("baixarRelatorio(); baixarHTML()", sim.context);
+  assert.deepEqual(sim.downloads.sort(), ["dossie-gestor-CAND-027.html", "dossie-gestor-CAND-027.txt"].sort(), "exporta o dossiê individual em HTML e TXT");
   assert.equal(sim.storage.getItem("desempenho_rascunho_v2"), null, "remove rascunho após concluir");
   vm.runInContext("novaMissao()", sim.context);
-  sim.context.document.querySelector("#nome").value = "Estudante 2";
+  sim.context.document.querySelector("#nome").value = "ANALY BARBOSA DE SOUSA";
+  sim.context.document.querySelector("#turma").value = "2º BT - Administração";
   vm.runInContext("iniciar()", sim.context);
   assert.equal(vm.runInContext("etapa", sim.context), 0, "nova missão começa na primeira etapa");
   vm.runInContext("etapa=3; persistir()", sim.context);
   const reload = runtime(sim.storage);
   vm.runInContext(fs.readFileSync(path.join(root, "app.js"), "utf8"), reload.context);
   await new Promise(resolve => setImmediate(resolve));
-  reload.context.document.querySelector("#nome").value = "__codigo__";
-  reload.context.document.querySelector("#codigo").value = "Estudante 2";
+  reload.context.document.querySelector("#nome").value = "ANALY BARBOSA DE SOUSA";
   reload.context.document.querySelector("#serie").value = "2ª série – Ensino Médio";
-  reload.context.document.querySelector("#turma").value = "2º AT";
+  reload.context.document.querySelector("#turma").value = "2º BT - Administração";
   vm.runInContext("iniciar()", reload.context);
   assert.equal(vm.runInContext("etapa", reload.context), 3, "retoma o rascunho na etapa salva");
 
   const panel = runtime(sim.storage);
   panel.storage.setItem("desempenho_resultados", JSON.stringify(rows));
   vm.runInContext(fs.readFileSync(path.join(root, "professor.js"), "utf8"), panel.context);
-  assert.match(panel.nodes.get("#resultados").innerHTML, /Estudante Teste/, "painel lista resultados locais");
+  const lockedResults = panel.context.document.querySelector("#resultados");
+  panel.context.document.querySelector("#painelProfessor").hidden = true;
+  assert.equal(lockedResults.innerHTML, "", "não revela resultados antes do código de acesso");
+  panel.context.document.querySelector("#codigoAcesso").value = "000000";
+  vm.runInContext('acessarPainel({ preventDefault() {} })', panel.context);
+  assert.equal(panel.context.document.querySelector("#painelProfessor").hidden, true, "painel permanece fechado quando o código está incorreto");
+  panel.context.document.querySelector("#codigoAcesso").value = "131313";
+  vm.runInContext('acessarPainel({ preventDefault() {} })', panel.context);
+  assert.equal(panel.context.document.querySelector("#painelProfessor").hidden, false, "abre o painel com o código correto");
+  assert.equal(panel.context.document.querySelector("#acessoProfessor").hidden, true, "oculta o formulário de acesso após autenticação");
+  assert.match(panel.nodes.get("#resultados").innerHTML, /ANA CLARA SOUSA CRUZ/, "painel lista resultados locais após o acesso");
   assert.match(panel.nodes.get("#resumo").innerHTML, /missões concluídas/, "painel calcula resumo");
   vm.runInContext(`ver(${JSON.stringify(rows[0].id)})`, panel.context);
   assert.match(panel.nodes.get("#detalhe").innerHTML, /Parecer do gestor/, "painel abre dossiê detalhado");
@@ -97,6 +116,11 @@ function runtime(storage = new Storage()) {
   const legacy = runtime();
   legacy.storage.setItem("desempenho_resultados", JSON.stringify([{ data: new Date().toISOString(), participante: "Registro anterior", serie: "2ª série", turma: "2º AT", nota: 75, nota_S21: 50 }]));
   vm.runInContext(fs.readFileSync(path.join(root, "professor.js"), "utf8"), legacy.context);
+  const legacyRows = legacy.context.document.querySelector("#resultados");
+  legacy.context.document.querySelector("#painelProfessor").hidden = true;
+  assert.equal(legacyRows.innerHTML, "", "mantém resultados anteriores protegidos até o acesso");
+  legacy.context.document.querySelector("#codigoAcesso").value = "131313";
+  vm.runInContext('acessarPainel({ preventDefault() {} })', legacy.context);
   assert.match(legacy.nodes.get("#resultados").innerHTML, /Registro anterior/, "mantém resultados gravados pelo MVP anterior");
   assert.match(legacy.nodes.get("#resultados").innerHTML, /50/, "exibe notas antigas por etapa");
   console.log("Smoke test concluído: missão completa, pontuação/relatório local e painel do professor.");

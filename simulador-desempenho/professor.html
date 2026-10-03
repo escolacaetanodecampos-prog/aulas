@@ -1,4 +1,35 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Resultados pedagógicos locais do Simulador de Gestão de Desempenho"><title>Painel do Professor • Gestão de Desempenho</title><link rel="stylesheet" href="styles.css"></head>
-<body><main class="shell"><section class="hero"><span class="eyebrow">Painel do professor • dados deste navegador</span><h1>Resultados da missão</h1><p>Consulte os percursos concluídos neste dispositivo, compare descritores e exporte uma cópia para análise pedagógica.</p><div class="actions"><a class="btn primary" href="index.html">Abrir simulador</a><button class="btn secondary" onclick="exportarCSV()">Exportar CSV</button><button class="btn secondary" onclick="exportarJSON()">Exportar JSON</button><button class="btn danger" onclick="limpar()">Apagar registros locais</button></div><div id="resumo" class="grid"></div><div class="field"><label for="filtro">Filtrar por estudante, turma ou série</label><input id="filtro" type="search" placeholder="Digite para filtrar" oninput="render()"></div><div id="resultados"></div><div id="detalhe"></div><div class="notice"><strong>Privacidade e alcance:</strong> os dados ficam no armazenamento local deste navegador e não são enviados a um servidor. O painel não consolida outros dispositivos; exporte os arquivos e reúna-os manualmente.</div><p class="muted"><a href="../rh/">Voltar ao REC_RH</a></p></section></main><script src="professor.js"></script></body></html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Resultados pedagógicos locais do Simulador de Gestão de Desempenho">
+<title>Painel do Professor • Gestão de Desempenho</title>
+<link rel="stylesheet" href="styles.css?v=student-panel-20261003">
+</head>
+<body>
+<main class="shell">
+  <section id="acessoProfessor" class="hero">
+    <span class="eyebrow">Acesso do professor</span>
+    <h1>Painel protegido</h1>
+    <p>Informe o código de acesso para consultar os resultados desta turma.</p>
+    <form id="formAcesso" onsubmit="return acessarPainel(event)">
+      <div class="field"><label for="codigoAcesso">Código de segurança</label><input id="codigoAcesso" type="password" inputmode="numeric" autocomplete="current-password" required aria-describedby="erroAcesso"></div>
+      <div id="erroAcesso" class="muted" role="alert" aria-live="polite"></div>
+      <button class="btn primary" type="submit">Acessar painel</button>
+    </form>
+  </section>
+  <section id="painelProfessor" class="hero" hidden>
+    <span class="eyebrow">Painel do professor • dados deste navegador</span>
+    <h1>Resultados da missão</h1>
+    <p>Consulte os percursos concluídos neste dispositivo, compare descritores e exporte uma cópia para análise pedagógica.</p>
+    <div class="actions"><a class="btn primary" href="index.html">Abrir simulador</a><button class="btn secondary" onclick="exportarCSV()">Exportar CSV</button><button class="btn secondary" onclick="exportarJSON()">Exportar JSON</button><button class="btn danger" onclick="limpar()">Apagar registros locais</button></div>
+    <div id="resumo" class="grid"></div>
+    <div class="field"><label for="filtro">Filtrar por estudante, turma ou série</label><input id="filtro" type="search" placeholder="Digite para filtrar" oninput="render()"></div>
+    <div id="resultados"></div><div id="detalhe"></div>
+    <div class="notice"><strong>Privacidade e alcance:</strong> os dados ficam no armazenamento local deste navegador e não são enviados a um servidor. O painel não consolida outros dispositivos; exporte os arquivos e reúna-os manualmente.</div>
+    <p class="muted"><a href="../rh/">Voltar ao REC_RH</a></p>
+  </section>
+</main>
+<script src="professor.js?v=teacher-pin-20261003"></script>
+</body>
+</html>

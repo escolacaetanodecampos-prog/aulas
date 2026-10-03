@@ -17,15 +17,15 @@ Cada etapa combina duas questões conceituais do banco `dados/cenarios.json` e u
 
 ## Identificação dos participantes
 
-A tela inicial oferece um seletor com os 61 nomes informados pela turma (incluindo ANA CLARA SOUSA CRUZ) e mantém a alternativa **Usar código pedagógico** para quem preferir não selecionar ou informar o nome. A lista fica em `dados/participantes.json`; os nomes selecionados são registrados junto aos resultados locais e às exportações individuais.
+A tela inicial oferece um seletor com os 61 nomes informados pela turma (incluindo ANA CLARA SOUSA CRUZ). A identificação é feita pelo nome; a série é fixa em 2ª série do Ensino Médio e a turma é escolhida entre **2º AT - Administração** e **2º BT - Administração**. A lista fica em `dados/participantes.json` e os nomes selecionados são registrados nos resultados e relatórios.
 
 ## Pontuação e persistência
 
 A pontuação soma descritores demonstrados: acerto das questões de conhecimento, escolha da decisão indicada no cenário, classificação correta das cinco partes da meta SMART e da ação do PDI, escolha de liderança e extensão mínima do parecer (100 caracteres). Na etapa S25, o estudante lê frases prontas do caso CAND-027 e escolhe em menus qual campo cada uma representa; cada classificação correta vale um descritor. A atividade apresenta retorno explicativo após cada escolha.
 
-O rascunho atual fica em `localStorage` com a chave `desempenho_rascunho_v2`; resultados concluídos continuam na chave existente `desempenho_resultados`, mantendo compatibilidade com tentativas anteriores. A persistência é limitada ao perfil do navegador e à origem (domínio/protocolo/pasta publicada). Não há sincronização entre dispositivos ou envio a servidor. O painel `professor.html` filtra registros locais, mostra notas por etapa e produções, e exporta CSV ou JSON para consolidação manual. Apagar registros é uma ação explícita no painel.
+O rascunho atual fica em `localStorage` com a chave `desempenho_rascunho_v2`; resultados concluídos continuam na chave existente `desempenho_resultados`, mantendo compatibilidade com tentativas anteriores. A persistência é limitada ao perfil do navegador e à origem (domínio/protocolo/pasta publicada). Não há sincronização entre dispositivos ou envio a servidor. O painel `professor.html` solicita o código `131313`, filtra registros locais, mostra notas por etapa e produções, e exporta CSV ou JSON para consolidação manual. Como o projeto é estático, o código é uma barreira de interface, não autenticação de servidor. Apagar registros é uma ação explícita no painel.
 
-O participante pode baixar o dossiê individual em TXT e JSON. A exportação contém identificação informada pelo estudante e respostas; armazene e compartilhe com cuidado.
+O participante pode baixar o dossiê individual em TXT ou HTML. O painel do professor mantém as exportações da turma em CSV e JSON. Os arquivos contêm identificação e respostas; armazene e compartilhe com cuidado.
 
 ## Publicação e manutenção
 

@@ -1,5 +1,7 @@
 const STORE="desempenho_resultados";
 const ETAPAS=["S21","S22","S23","S24","S25","S26"];
+const CODIGO_ACESSO_PROFESSOR="131313";
+function acessarPainel(event){event?.preventDefault();const entrada=document.querySelector("#codigoAcesso");if(entrada.value!==CODIGO_ACESSO_PROFESSOR){document.querySelector("#erroAcesso").textContent="Código incorreto. Confira e tente novamente.";entrada.value="";entrada.focus();return false}document.querySelector("#acessoProfessor").hidden=true;document.querySelector("#painelProfessor").hidden=false;render();return false}
 function registros(){try{const x=JSON.parse(localStorage.getItem(STORE)||"[]");return Array.isArray(x)?x.map((r,i)=>({...r,id:r.id||`legado-${r.data||"sem-data"}-${i}`})):[]}catch{return []}}
 function esc(s=""){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function resumo(){const a=registros(),n=a.length,media=n?Math.round(a.reduce((t,x)=>t+(Number(x.nota)||0),0)/n):0;document.querySelector("#resumo").innerHTML=[[n,"missões concluídas"],[media,"média geral / 100"],[new Set(a.map(x=>x.turma)).size,"turmas registradas"]].map(([v,l])=>`<article class="card"><div class="metric">${v}</div><p class="muted">${l}</p></article>`).join("")}
@@ -10,4 +12,3 @@ function exportarJSON(){baixar("resultados-simulador-desempenho.json",JSON.strin
 function csv(v){return `"${String(v??"").replace(/"/g,'""')}"`}
 function exportarCSV(){const a=registros(),headers=["data","participante","serie","turma","colaborador","nota","total_descritores","max_descritores",...ETAPAS.map(k=>`nota_${k}`),"dossie"];const rows=a.map(x=>[x.data,x.participante,x.serie,x.turma,x.colaborador,x.nota,x.total,x.max,...ETAPAS.map(k=>x.porEtapa?.[k]?.nota??x[`nota_${k}`]??""),x.dossie].map(csv).join(";"));baixar("resultados-simulador-desempenho.csv",[headers.join(";"),...rows].join("\r\n"),"text/csv;charset=utf-8")}
 function limpar(){if(!registros().length)return;if(confirm("Apagar todos os resultados salvos neste navegador? Exporte uma cópia antes, se precisar.")){localStorage.removeItem(STORE);document.querySelector("#detalhe").innerHTML="";render()}}
-render();
