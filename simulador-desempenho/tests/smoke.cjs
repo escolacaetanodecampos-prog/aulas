@@ -48,7 +48,11 @@ function runtime(storage = new Storage()) {
     for (const q of qs) vm.runInContext(`selecionar(${JSON.stringify(q.id)}, ${JSON.stringify(q.opcoes.find(o => o[2] === 1)[0])})`, sim.context);
     if (i < 4) vm.runInContext(`decidir("s${21 + i}_desafio", ${JSON.stringify(decisions[i])})`, sim.context);
     if (i === 4) {
-      for (const [key, value] of Object.entries({ specific: "Enviar atualização antes da reunião", measure: "Duas atualizações mensais", achievable: "Usar modelo e prática orientada", relevant: "Antecipar riscos de prazo", time: "Revisar em 60 dias", action: "Apresentar status quinzenal com mentoria" })) vm.runInContext(`guardar("s25_${key}", ${JSON.stringify(value)})`, sim.context);
+      vm.runInContext('classificarSmart("s25", "specific", "measure")', sim.context);
+      assert.match(sim.nodes.get("#retorno").innerHTML, /Vamos revisar/, "dá retorno imediato quando a classificação precisa ser revista");
+      assert.match(sim.nodes.get("#retorno").innerHTML, /corresponde a <strong>Específica<\/strong>/, "informa a classificação correta no retorno");
+      for (const key of ["specific", "measure", "achievable", "relevant", "time", "action"]) vm.runInContext(`classificarSmart("s25", ${JSON.stringify(key)}, ${JSON.stringify(key)})`, sim.context);
+      assert.equal(vm.runInContext("validacaoEtapa()", sim.context), "", "permite avançar após classificar as seis frases");
     }
     if (i === 5) {
       vm.runInContext('decidir("s26_lead", "autonomy")', sim.context);
@@ -60,7 +64,9 @@ function runtime(storage = new Storage()) {
   assert.equal(rows.length, 1, "salva uma missão concluída");
   assert.equal(rows[0].nota, 100, "atribui pontuação máxima a todas as respostas e produções completas");
   assert.equal(Object.keys(rows[0].porEtapa).length, 6, "reporta as seis etapas");
-  assert.ok(rows[0].descritores["S25 • SMART specific"], "inclui pontuação do SMART por componente");
+  assert.ok(rows[0].descritores["S25 • Específica"], "inclui pontuação de classificação por campo SMART");
+  assert.equal(rows[0].descritores["S25 • Ação do PDI"].nota, 100, "pontua a classificação da ação do PDI");
+  assert.match(rows[0].producoes["S25 • Classificação — Específica"], /Classificação escolhida: Específica/, "relatório registra a frase e a classificação escolhida");
   assert.match(sim.app.innerHTML, /Dossiê completo/, "apresenta o dossiê final");
   assert.equal(sim.storage.getItem("desempenho_rascunho_v2"), null, "remove rascunho após concluir");
   vm.runInContext("novaMissao()", sim.context);

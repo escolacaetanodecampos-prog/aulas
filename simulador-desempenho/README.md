@@ -21,7 +21,7 @@ A tela inicial oferece um seletor com os 61 nomes informados pela turma (incluin
 
 ## Pontuação e persistência
 
-A pontuação soma descritores demonstrados: acerto das questões de conhecimento, escolha da decisão indicada no cenário, preenchimento de cada componente SMART (mínimo de 5 caracteres), ação do PDI (10 caracteres), escolha de liderança e extensão mínima do parecer (100 caracteres). A rubrica é deliberadamente visível no resultado; comprimento e preenchimento não medem sozinhos a qualidade argumentativa. O professor deve ler o dossiê e considerar o contexto antes de atribuir valor pedagógico às respostas abertas.
+A pontuação soma descritores demonstrados: acerto das questões de conhecimento, escolha da decisão indicada no cenário, classificação correta das cinco partes da meta SMART e da ação do PDI, escolha de liderança e extensão mínima do parecer (100 caracteres). Na etapa S25, o estudante lê frases prontas do caso CAND-027 e escolhe em menus qual campo cada uma representa; cada classificação correta vale um descritor. A atividade apresenta retorno explicativo após cada escolha.
 
 O rascunho atual fica em `localStorage` com a chave `desempenho_rascunho_v2`; resultados concluídos continuam na chave existente `desempenho_resultados`, mantendo compatibilidade com tentativas anteriores. A persistência é limitada ao perfil do navegador e à origem (domínio/protocolo/pasta publicada). Não há sincronização entre dispositivos ou envio a servidor. O painel `professor.html` filtra registros locais, mostra notas por etapa e produções, e exporta CSV ou JSON para consolidação manual. Apagar registros é uma ação explícita no painel.
 
