@@ -8,6 +8,11 @@ const banco = JSON.parse(fs.readFileSync(path.join(root, "dados/cenarios.json"),
 const participantes = JSON.parse(fs.readFileSync(path.join(root, "dados/participantes.json"), "utf8")).participantes;
 assert.equal(participantes.length, 61, "inclui os 60 nomes numerados e ANA CLARA SOUSA CRUZ");
 assert.equal(new Set(participantes).size, participantes.length, "não duplica nomes no seletor");
+const pagesWorkflow = fs.readFileSync(path.resolve(root, "../.github/workflows/desempenho-pages.yml"), "utf8");
+assert.match(pagesWorkflow, /cp -R simulador-rh-mvp\/\. _site\/simulador-rh-mvp\//, "publica o caminho direto do simulador RH");
+assert.match(pagesWorkflow, /cp -R rh\/\. _site\/rh\//, "publica o atalho /rh para o simulador RH");
+assert.match(pagesWorkflow, /test -f _site\/rh\/index\.html/, "garante que o atalho /rh foi copiado");
+assert.match(pagesWorkflow, /test -f _site\/simulador-rh-mvp\/index\.html/, "falha o deploy se faltar a página do simulador RH");
 class Storage {
   data = new Map();
   getItem(k) { return this.data.has(k) ? this.data.get(k) : null; }

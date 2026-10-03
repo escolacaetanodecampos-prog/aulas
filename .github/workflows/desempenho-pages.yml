@@ -34,10 +34,14 @@ jobs:
 
       - name: Assemble site and preserve REC_RH
         run: |
-          mkdir -p _site
+          mkdir -p _site _site/rh _site/simulador-rh-mvp
           cp -R simulador-rh-mvp/. _site/
+          cp -R simulador-rh-mvp/. _site/simulador-rh-mvp/
+          cp -R rh/. _site/rh/
           cp -R simulador-desempenho _site/simulador-desempenho
           cp -R desempenho _site/desempenho
+          test -f _site/rh/index.html
+          test -f _site/simulador-rh-mvp/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
