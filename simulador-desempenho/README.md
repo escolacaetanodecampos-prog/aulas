@@ -1,19 +1,39 @@
 # Simulador de Gestão de Desempenho
 
-Projeto pedagógico do 4º bimestre de Introdução à Administração, Legislação e Pessoas.
+Missão pedagógica do 4º bimestre de Introdução à Administração, Legislação e Pessoas. Aplicação estática, em português, sem dependências ou backend. O percurso usa o caso fictício **CAND-027 — Nayara Pinos Ortiz**; não use o simulador para decisões reais de emprego.
 
-## Percurso
-S21 → S22 → S23 → S24 → S25 → S26
+## Percurso de aprendizagem
 
-O projeto está em desenvolvimento separado do REC_RH. A branch de desenvolvimento é `desempenho-v2`.
+| Etapa | Fase | Conteúdo e produção |
+|---|---|---|
+| S21 | CONHECER | Finalidade, critérios, período e estrutura da avaliação |
+| S22 | ANALISAR | Indicadores, métodos, evidências e vieses (recência e halo) |
+| S23 | DECIDIR | Competências e análise CHA (conhecimento, habilidade e atitude observável) |
+| S24 | JUSTIFICAR | Laboratório de feedback com situação, impacto, escuta e decisão |
+| S25 | PLANEJAR | Meta SMART com ação de desenvolvimento individual (PDI) |
+| S26 | LIDERAR | Autonomia, acompanhamento, engajamento e dossiê final do gestor |
 
-## Princípios
-- situações fictícias;
-- decisões baseadas em evidências;
-- feedback formativo;
-- metas SMART;
-- desenvolvimento e liderança;
-- acompanhamento por conteúdo.
+Cada etapa combina duas questões conceituais do banco `dados/cenarios.json` e um desafio aplicado. As escolhas mostram feedback e consequências pedagógicas prováveis. A missão final reúne a decisão, a produção do participante e um relatório por etapa e descritor.
 
-## Acesso
-O atalho público é `/desempenho/` e redireciona para o simulador.
+## Pontuação e persistência
+
+A pontuação soma descritores demonstrados: acerto das questões de conhecimento, escolha da decisão indicada no cenário, preenchimento de cada componente SMART (mínimo de 5 caracteres), ação do PDI (10 caracteres), escolha de liderança e extensão mínima do parecer (100 caracteres). A rubrica é deliberadamente visível no resultado; comprimento e preenchimento não medem sozinhos a qualidade argumentativa. O professor deve ler o dossiê e considerar o contexto antes de atribuir valor pedagógico às respostas abertas.
+
+O rascunho atual fica em `localStorage` com a chave `desempenho_rascunho_v2`; resultados concluídos continuam na chave existente `desempenho_resultados`, mantendo compatibilidade com tentativas anteriores. A persistência é limitada ao perfil do navegador e à origem (domínio/protocolo/pasta publicada). Não há sincronização entre dispositivos ou envio a servidor. O painel `professor.html` filtra registros locais, mostra notas por etapa e produções, e exporta CSV ou JSON para consolidação manual. Apagar registros é uma ação explícita no painel.
+
+O participante pode baixar o dossiê individual em TXT e JSON. A exportação contém identificação informada pelo estudante e respostas; armazene e compartilhe com cuidado.
+
+## Publicação e manutenção
+
+Os arquivos podem ser servidos como site estático/GitHub Pages. `index.html` carrega `app.js`, `styles.css` e `dados/cenarios.json`; o painel carrega `professor.js`. Mantenha esses arquivos na mesma pasta e publique o subdiretório completo. O atalho `/desempenho/` existente redireciona para o simulador. `../rh/` continua separado; as mudanças desta versão ficam somente no simulador.
+
+## Validação local
+
+- Verifique a sintaxe de `app.js` e `professor.js` com Node.js: `node --check app.js` e `node --check professor.js`.
+- Sirva a pasta por HTTP para que `fetch()` carregue o JSON (abrir o HTML por `file://` não é suportado).
+- Complete uma missão, recarregue o painel na mesma origem, confira notas/produções e teste as exportações CSV e JSON.
+- Verifique em janela móvel que a tabela do painel rola horizontalmente e que o fluxo de etapas cabe na tela.
+
+## Limites conhecidos
+
+Este é um protótipo pedagógico offline. O painel não é uma base institucional multiusuário, não controla identidade nem permissões, e os dados podem ser removidos pelo navegador. Os indicadores do caso são fictícios e servem apenas para discussão didática.
