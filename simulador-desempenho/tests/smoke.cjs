@@ -5,6 +5,9 @@ const vm = require("node:vm");
 
 const root = path.resolve(__dirname, "..");
 const banco = JSON.parse(fs.readFileSync(path.join(root, "dados/cenarios.json"), "utf8"));
+const participantes = JSON.parse(fs.readFileSync(path.join(root, "dados/participantes.json"), "utf8")).participantes;
+assert.equal(participantes.length, 61, "inclui os 60 nomes numerados e ANA CLARA SOUSA CRUZ");
+assert.equal(new Set(participantes).size, participantes.length, "não duplica nomes no seletor");
 class Storage {
   data = new Map();
   getItem(k) { return this.data.has(k) ? this.data.get(k) : null; }
@@ -23,7 +26,7 @@ function runtime(storage = new Storage()) {
   };
   const context = vm.createContext({
     document, localStorage: storage, console, Date, Math, Blob, URL,
-    setTimeout() {}, fetch: async () => ({ ok: true, json: async () => banco })
+    setTimeout() {}, fetch: async url => ({ ok: true, json: async () => String(url).includes("participantes.json") ? { participantes } : banco })
   });
   return { context, nodes, app, storage, downloads };
 }
@@ -32,7 +35,9 @@ function runtime(storage = new Storage()) {
   const sim = runtime();
   vm.runInContext(fs.readFileSync(path.join(root, "app.js"), "utf8"), sim.context);
   await new Promise(resolve => setImmediate(resolve));
-  sim.context.document.querySelector("#nome").value = "Estudante Teste";
+  assert.match(sim.app.innerHTML, /ANA CLARA SOUSA CRUZ/, "exibe os nomes cadastrados para seleção");
+  sim.context.document.querySelector("#nome").value = "__codigo__";
+  sim.context.document.querySelector("#codigo").value = "Estudante Teste";
   sim.context.document.querySelector("#serie").value = "2ª série – Ensino Médio";
   sim.context.document.querySelector("#turma").value = "2º AT";
   vm.runInContext("iniciar()", sim.context);
@@ -66,7 +71,8 @@ function runtime(storage = new Storage()) {
   const reload = runtime(sim.storage);
   vm.runInContext(fs.readFileSync(path.join(root, "app.js"), "utf8"), reload.context);
   await new Promise(resolve => setImmediate(resolve));
-  reload.context.document.querySelector("#nome").value = "Estudante 2";
+  reload.context.document.querySelector("#nome").value = "__codigo__";
+  reload.context.document.querySelector("#codigo").value = "Estudante 2";
   reload.context.document.querySelector("#serie").value = "2ª série – Ensino Médio";
   reload.context.document.querySelector("#turma").value = "2º AT";
   vm.runInContext("iniciar()", reload.context);

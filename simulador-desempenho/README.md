@@ -15,6 +15,10 @@ Missão pedagógica do 4º bimestre de Introdução à Administração, Legisla�
 
 Cada etapa combina duas questões conceituais do banco `dados/cenarios.json` e um desafio aplicado. As escolhas mostram feedback e consequências pedagógicas prováveis. A missão final reúne a decisão, a produção do participante e um relatório por etapa e descritor.
 
+## Identificação dos participantes
+
+A tela inicial oferece um seletor com os 61 nomes informados pela turma (incluindo ANA CLARA SOUSA CRUZ) e mantém a alternativa **Usar código pedagógico** para quem preferir não selecionar ou informar o nome. A lista fica em `dados/participantes.json`; os nomes selecionados são registrados junto aos resultados locais e às exportações individuais.
+
 ## Pontuação e persistência
 
 A pontuação soma descritores demonstrados: acerto das questões de conhecimento, escolha da decisão indicada no cenário, preenchimento de cada componente SMART (mínimo de 5 caracteres), ação do PDI (10 caracteres), escolha de liderança e extensão mínima do parecer (100 caracteres). A rubrica é deliberadamente visível no resultado; comprimento e preenchimento não medem sozinhos a qualidade argumentativa. O professor deve ler o dossiê e considerar o contexto antes de atribuir valor pedagógico às respostas abertas.
