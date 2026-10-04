@@ -6,6 +6,7 @@ on:
     paths:
       - "simulador-desempenho/**"
       - "desempenho/**"
+      - "simulador-rh-mvp/**"
       - ".github/workflows/desempenho-pages.yml"
 
 permissions:
