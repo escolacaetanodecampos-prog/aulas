@@ -1,5 +1,5 @@
 const app = document.querySelector("#app");
-const API_URL = "https://script.google.com/macros/s/AKfycbwrrIUSuthv0W1t0mZjFlctC0fQHWAQ5A8OLwLilbRrDp3om71PUax7vcAe3cOBBk06/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbyJ0eRDfjHPulR9tqv-yvtEy_NvOXPEUeJvYIkMrKUc_3r9Z6qseP9Mni2TkKoOqxTx/exec";
 const RESULTADOS = "desempenho_resultados";
 const RASCUNHO = "desempenho_rascunho_v2";
 const FLUXO = ["CONHECER", "ANALISAR", "DECIDIR", "JUSTIFICAR", "PLANEJAR", "LIDERAR"];
