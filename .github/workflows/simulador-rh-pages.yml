@@ -19,16 +19,46 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
+
+      - name: Checkout desempenho-v2
+        uses: actions/checkout@v4
+        with:
+          ref: desempenho-v2
+          path: _desempenho_branch
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site _site/rh _site/simulador-rh-mvp _site/simulador-desempenho _site/desempenho
+
+          # Mantém o comportamento atual do RH na raiz e no caminho próprio.
+          cp -R simulador-rh-mvp/. _site/
+          cp -R simulador-rh-mvp/. _site/simulador-rh-mvp/
+
+          # Preserva o simulador de desempenho da branch desempenho-v2.
+          cp -R _desempenho_branch/simulador-desempenho/. _site/simulador-desempenho/
+
+          # Preserva as demais rotas já publicadas pelo workflow de desempenho.
+          cp -R _desempenho_branch/rh/. _site/rh/
+          cp -R _desempenho_branch/desempenho/. _site/desempenho/
+
+          test -f _site/index.html
+          test -f _site/simulador-rh-mvp/index.html
+          test -f _site/simulador-desempenho/index.html
+          test -f _site/rh/index.html
+          test -f _site/desempenho/index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './simulador-rh-mvp'
+          path: './_site'
+
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
