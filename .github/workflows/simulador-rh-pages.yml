@@ -8,6 +8,7 @@ on:
     paths:
       - 'index.html'
       - '404.html'
+      - '.nojekyll'
       - 'simulador-rh-mvp/**'
       - 'simulador-desempenho/**'
       - 'rh/**'
@@ -68,6 +69,7 @@ jobs:
           # Portal de entrada e rotas estáveis: fonte oficial = main.
           cp _main/index.html _site/index.html
           cp _main/404.html _site/404.html
+          cp _main/.nojekyll _site/.nojekyll
           mkdir -p _site/gestao-desempenho _site/simulador-gestao-desempenho _site/simulador-rh
           cp -R _main/gestao-desempenho/. _site/gestao-desempenho/
           cp -R _main/simulador-gestao-desempenho/. _site/simulador-gestao-desempenho/
@@ -85,6 +87,7 @@ jobs:
           # Validação obrigatória antes da publicação.
           test -f _site/index.html
           test -f _site/404.html
+          test -f _site/.nojekyll
           test -f _site/simulador-rh-mvp/index.html
           test -f _site/simulador-desempenho/index.html
           test -f _site/rh/index.html
