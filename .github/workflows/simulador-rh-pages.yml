@@ -60,6 +60,14 @@ jobs:
           mkdir -p _site/simulador-rh-mvp
           cp -R _main/simulador-rh-mvp/. _site/simulador-rh-mvp/
 
+          # Portal de entrada e rotas estáveis: fonte oficial = main.
+          cp _main/index.html _site/index.html
+          cp _main/404.html _site/404.html
+          mkdir -p _site/gestao-desempenho _site/simulador-gestao-desempenho _site/simulador-rh
+          cp -R _main/gestao-desempenho/. _site/gestao-desempenho/
+          cp -R _main/simulador-gestao-desempenho/. _site/simulador-gestao-desempenho/
+          cp -R _main/simulador-rh/. _site/simulador-rh/
+
           # Gestão de Desempenho: fonte oficial = desempenho-v2.
           mkdir -p _site/simulador-desempenho
           cp -R _desempenho_branch/simulador-desempenho/. _site/simulador-desempenho/
@@ -71,10 +79,14 @@ jobs:
 
           # Validação obrigatória antes da publicação.
           test -f _site/index.html
+          test -f _site/404.html
           test -f _site/simulador-rh-mvp/index.html
           test -f _site/simulador-desempenho/index.html
           test -f _site/rh/index.html
           test -f _site/desempenho/index.html
+          test -f _site/gestao-desempenho/index.html
+          test -f _site/simulador-gestao-desempenho/index.html
+          test -f _site/simulador-rh/index.html
 
           echo "=== SITE MONTADO ==="
           find _site -maxdepth 2 -type f | sort
