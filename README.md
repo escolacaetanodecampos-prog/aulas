@@ -1,12 +1,17 @@
-# Script de Criação de Estrutura de Pastas - Coordenação Pedagógica
+# Simulador de Gestão de Desempenho
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/escolacaetanodecampos-prog/aulas/blob/main/criar_pastas_colab.ipynb)
+Ambiente exclusivo do Simulador de Gestão de Desempenho da EE Caetano de Campos.
 
-Este notebook cria automaticamente a estrutura de pastas da Coordenação Pedagógica no seu Google Drive usando Python e Google Colab.
+Este projeto foi separado do repositório geral de aulas para manter o simulador de Gestão de Desempenho em um ambiente próprio, com publicação independente no GitHub Pages.
 
-## ✅ Como usar
+## Publicação
 
-1. Clique no botão **"Open In Colab"** acima
-2. Autorize o acesso ao seu Google Drive quando solicitado
-3. Execute todas as células para gerar a estrutura completa de pastas
-4. As pastas serão criadas em: `Meu Drive > Coordenação Pedagógica`
+O site é uma aplicação estática (HTML, CSS e JavaScript) e utiliza Google Apps Script para registrar os resultados.
+
+## Arquivos principais
+
+- index.html
+- styles.css
+- app.js
+- dados/cenarios.json
+- dados/participantes.json
