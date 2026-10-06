@@ -1,26 +1,40 @@
-name: Publicar Simulador RH
+name: Publicar site completo no GitHub Pages
+
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - desempenho-v2
     paths:
       - 'simulador-rh-mvp/**'
+      - 'simulador-desempenho/**'
+      - 'rh/**'
+      - 'desempenho/**'
       - '.github/workflows/simulador-rh-pages.yml'
+      - '.github/workflows/desempenho-pages.yml'
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
-  group: pages
+  group: github-pages-production
   cancel-in-progress: true
+
 jobs:
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout main
+      - name: Checkout RH (main)
         uses: actions/checkout@v4
+        with:
+          ref: main
+          path: _main
 
       - name: Checkout desempenho-v2
         uses: actions/checkout@v4
@@ -33,32 +47,43 @@ jobs:
         with:
           enablement: true
 
-      - name: Assemble site
+      - name: Assemble complete site
+        shell: bash
         run: |
-          mkdir -p _site _site/rh _site/simulador-rh-mvp _site/simulador-desempenho _site/desempenho
+          set -euo pipefail
 
-          # Mantém o comportamento atual do RH na raiz e no caminho próprio.
-          cp -R simulador-rh-mvp/. _site/
-          cp -R simulador-rh-mvp/. _site/simulador-rh-mvp/
+          rm -rf _site
+          mkdir -p _site
 
-          # Preserva o simulador de desempenho da branch desempenho-v2.
+          # RH: fonte oficial = main.
+          cp -R _main/simulador-rh-mvp/. _site/
+          mkdir -p _site/simulador-rh-mvp
+          cp -R _main/simulador-rh-mvp/. _site/simulador-rh-mvp/
+
+          # Gestão de Desempenho: fonte oficial = desempenho-v2.
+          mkdir -p _site/simulador-desempenho
           cp -R _desempenho_branch/simulador-desempenho/. _site/simulador-desempenho/
 
-          # Preserva as demais rotas já publicadas pelo workflow de desempenho.
+          # Rotas auxiliares preservadas.
+          mkdir -p _site/rh _site/desempenho
           cp -R _desempenho_branch/rh/. _site/rh/
           cp -R _desempenho_branch/desempenho/. _site/desempenho/
 
+          # Validação obrigatória antes da publicação.
           test -f _site/index.html
           test -f _site/simulador-rh-mvp/index.html
           test -f _site/simulador-desempenho/index.html
           test -f _site/rh/index.html
           test -f _site/desempenho/index.html
 
-      - name: Upload artifact
+          echo "=== SITE MONTADO ==="
+          find _site -maxdepth 2 -type f | sort
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './_site'
+          path: _site
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
