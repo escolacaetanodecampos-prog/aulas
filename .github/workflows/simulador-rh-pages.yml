@@ -6,10 +6,15 @@ on:
       - main
       - desempenho-v2
     paths:
+      - 'index.html'
+      - '404.html'
       - 'simulador-rh-mvp/**'
       - 'simulador-desempenho/**'
       - 'rh/**'
       - 'desempenho/**'
+      - 'gestao-desempenho/**'
+      - 'simulador-gestao-desempenho/**'
+      - 'simulador-rh/**'
       - '.github/workflows/simulador-rh-pages.yml'
       - '.github/workflows/desempenho-pages.yml'
 
